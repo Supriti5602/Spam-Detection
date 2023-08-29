@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SMS Spam Detection</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            color: white;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid white;
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+
+        input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        p {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>SMS Spam Detection</h1>
+    <form method="POST">
+        <label for="Text">Enter a message:</label><br>
+        <textarea name="Text" rows="4" cols="50"></textarea><br>
+        <input type="submit" value="Check">
+    </form>
+    {% if result %}
+        <p><strong>Prediction:</strong> {{ result }}</p>
+    {% endif %}
+</body>
+</html>
